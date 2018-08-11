@@ -1,53 +1,13 @@
-@import 'cocktail/cocktail.css';
-@import 'details/details.css';
 @import 'fonts/font.css';
 
 html {
-  background-image: url(../image/cocktail-bg.png);
+  /* background-image: url(../image/cocktail-bg.png); */
   background-size: cover;
   background-attachment: fixed;
+  font-family: MontAxtraLight;
 }
 
 body {
   margin: 0px;
   padding: 0px;
-}
-
-.container {
-  height: 100%;
-  width: 100%;
-}
-
-.container-font-family {
-  font-family: MontExtraLight;
-}
-
-.container-font-size-m {
-  font-size: 17pt;
-  font-weight: bolder;
-}
-
-.main-field {
-  height: 100%;
-  width: 85%;
-  margin: auto;
-}
-
-.main-field-flexbox {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-.details {
-  color: white;
-}
-
-.details-flexbox {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
 }
