@@ -15,14 +15,15 @@ class DataPost extends Component {
     //this.props.switchLike(this.props.activePhoto, this.props.idUser);
   }
   render () {
+    const {likes, datePost} = this.props;
     return (
       <div className="data-post data-post-flex">
         <div className="data-post_like-comment-mark data-post_like-comment-mark-flex">
           <li onClick={ this.switchLike.bind(this) } className="far fa-heart fa-2x icon-like icon-like-unactive" />
           <li className="far fa-comment icon-comment fa-2x" />
         </div>
-        <div className="data-post_likes">{ this.props.likes } likes</div>
-        <div className="data-post_date">{ this.props.datePost }</div>
+        <div className="data-post_likes">{ likes } likes</div>
+        <div className="data-post_date">{ datePost }</div>
       </div>
     );
   }

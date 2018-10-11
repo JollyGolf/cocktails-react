@@ -6,8 +6,9 @@ import { addComment } from '../actions/index';
 
 class Comments extends Component {
   showComments(){
-    return this.props.comments.map((comment, index) => {
-      if(comment.idPost === this.props.idPost){
+    const {comments, idPost, users} = this.props;
+    return comments.map((comment, index) => {
+      if(comment.idPost === idPost){
         return (
           <Comment 
             key={ comment.idComments } 
@@ -16,7 +17,7 @@ class Comments extends Component {
             idUser={ comment.idUser } 
             textComment={ comment.text } 
             size="m"
-            users={ this.props.users }
+            users={ users }
           />
         );
       } return null;

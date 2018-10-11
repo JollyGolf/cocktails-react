@@ -6,13 +6,13 @@ import { select } from '../actions/index';
 
 class Photos extends Component {
   showPhoto(){
-    return this.props.photos.map((photo, index) => {
+    const {select, photos} = this.props;
+    return photos.map((photo, index) => {
       return (
-        <Photo onClick={() => this.props.select(photo)} key={ photo.idPost } idPost={ photo.idPost } srcImg={ photo.img } size="m" />
+        <Photo onClick={() => select(photo)} key={ photo.idPost } idPost={ photo.idPost } srcImg={ photo.img } size="m" />
       );
     })
   }
-
   render () {
   	return (
   	  <div className="photos photos-flex">

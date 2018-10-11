@@ -11,21 +11,21 @@ export const initialState = [
   	  idPost: 1,
   	  idUser: 3,
   	  likes: 0,
-      text: "Mathafacka"
+      text: "How are you?"
   	},
   	{
       idComments: 3,
   	  idPost: 1,
   	  idUser: 1,
   	  likes: 0,
-      text: "Jusie"
+      text: "There are many variation"
   	},
   	{
       idComments: 4,
   	  idPost: 1,
   	  idUser: 3,
   	  likes: 0,
-      text: "Mamatron"
+      text: "Oh, okay, sorry"
   	},
   	{
       idComments: 5,
@@ -39,7 +39,7 @@ export const initialState = [
   	  idPost: 2,
   	  idUser: 1,
   	  likes: 0,
-      text: "Hello momo"
+      text: "Hello too"
   	}
   ]
 

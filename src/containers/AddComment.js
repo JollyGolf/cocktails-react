@@ -11,23 +11,25 @@ class AddComment extends Component {
     };
   }
   setComment(){
-  	if(this.state.inputValue !== "") {
-  	  this.props.addComment({
+    const {idPost, idUser, addComment} = this.props;
+    const {inputValue} = this.state;
+  	if(inputValue !== "") {
+  	  addComment({
   	    idComments: Date.now(),
-  	    idPost: this.props.idPost,
-  	    idUser: this.props.idUser,
+  	    idPost: idPost,
+  	    idUser: idUser,
   	    likes: 0,
-  	    text: this.state.inputValue
+  	    text: inputValue
       });
       this.setState({inputValue : ""});
     }
   }
   render () {
+    const {inputValue} = this.state;
     return (
       <div className="add-comment add-comment-flex">
-        <input value={this.state.inputValue} onChange={evt => this.updateInputValue(evt)} className="comment-disable write-comment-input" placeholder="Add comment..."/>
-        <li onClick={this.setComment.bind(this) } 
-  		className="fa fa-paper-plane-o fa-2x icon-send"/>
+        <input value={inputValue} onChange={evt => this.updateInputValue(evt)} className="comment-disable write-comment-input" placeholder="Add comment..."/>
+        <li onClick={this.setComment.bind(this) } className="fa fa-paper-plane-o fa-2x icon-send"/>
       </div>
     );
   }
