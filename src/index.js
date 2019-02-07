@@ -1,18 +1,18 @@
-import React, { Component, Fragment } from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
 import './css/style.css';
 import { Provider } from 'react-redux';
-import MainField from './components/MainField';
-//import allReducers from './reducers';
+import Page from './components/Page';
+import allReducers from './reducers';
 import registerServiceWorker from './registerServiceWorker';
 import { createStore } from 'redux';
 
-//const store = createStore(allReducers);
+const store = createStore(allReducers, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 
 ReactDOM.render(
-  <Fragment /*store={store}*/>
-    <MainField />
-  </Fragment>, 
+  <Provider store={store}>
+    <Page />
+  </Provider>, 
   document.getElementById('root')
 );
  
